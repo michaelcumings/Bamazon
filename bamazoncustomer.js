@@ -29,10 +29,6 @@ function start() {
 
 function drawtable() {
     // instantiate
-    // var table = new Table({
-    //     // head: ['ID#', 'Product Name', 'Price']
-    // // , colWidths: [100, 200, 300]
-    // });
 
     table.head = ['ID#', 'Product Name', 'Price'];
 
@@ -50,14 +46,6 @@ function drawtable() {
         return;
         // choice();
       });
-    // table is an Array, so you can `push`, `unshift`, `splice` and friends
-    // table.push(
-    //     ['First value', 'Second value']
-    // , ['First value', 'Second value']
-    // );
-    
-    // console.log(table.toString());
-    // choice();
 }
 
 function choice() {
