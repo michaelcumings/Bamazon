@@ -23,6 +23,11 @@ var table = new Table({
 });
 
 function start() {
+  drawtable();
+  // choice();
+}
+
+function drawtable() {
     // instantiate
     // var table = new Table({
     //     // head: ['ID#', 'Product Name', 'Price']
@@ -40,9 +45,10 @@ function start() {
         }
         connection.pause();
             console.log(table.toString());
-            // choice();
-        connection.resume();
-        choice();
+            choice();
+        // connection.resume();
+        return;
+        // choice();
       });
     // table is an Array, so you can `push`, `unshift`, `splice` and friends
     // table.push(
@@ -56,6 +62,7 @@ function start() {
 
 function choice() {
     // console.log(table.toString());
+    connection.resume();
     inquirer
     .prompt([
       {
@@ -105,25 +112,9 @@ function choice() {
 
             }
         });
-        // for (var i = 0; i < res.length; i++) {
-        //   console.log(
-        //     "Position: " +
-        //       res[i].position +
-        //       " || Song: " +
-        //       res[i].song +
-        //       " || Artist: " +
-        //       res[i].artist +
-        //       " || Year: " +
-        //       res[i].year
-        //   );
-        // }
-        // runSearch();
+
       });
     }
-    // start();
-    // return;
 
-//     return;
-// }
 
 start();
